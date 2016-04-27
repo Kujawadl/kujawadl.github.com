@@ -1,16 +1,10 @@
 # main links links
 main:
-  #- title: "Quick-Start Guide"
-  #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "<img src='/images/info.png' style='height:20px;width:20px;'/> About"
+    url: /about
 
-  #- title: "About"
-  #  url: https://mmistakes.github.io/minimal-mistakes/
+  - title: "<img src='/images/lightbulb.png' style='height:20px;width:20px;'/> Education"
+    url: /education
 
-  #- title: "Sample Posts"
-  #  url: https://mmistakes.github.io/minimal-mistakes/year-archive/
-
-  #- title: "Sample Pages"
-  #  url: https://mmistakes.github.io/minimal-mistakes/page-archive/
-
-  #- title: "Sample Collections"
-  #  url: https://mmistakes.github.io/minimal-mistakes/collection-archive/
+  - title: "<img src='/images/briefcase.png' style='height:20px;width:20px;margin:0 0 5px 0;'/> Experience"
+    url: /experience

@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Dylan Jager-Kujawa"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : ""
+description              : "."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
@@ -61,11 +61,11 @@ google_ad_slot           :
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Dylan Jager-Kujawa"
   avatar           : "bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
-  email            :
+  bio              : "CS Undergrad at Stephen F. Austin State University"
+  location         : "Nacogdoches, TX"
+  email            : "dylan@jagerkujawa.com"
   uri              :
   bitbucket        :
   codepen          :
@@ -73,15 +73,15 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : Kujawadl
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         :
+  linkedin         : dylanjagerkujawa
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    : 
   steam            :
   tumblr           :
   twitter          :
