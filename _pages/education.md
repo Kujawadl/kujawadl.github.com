@@ -13,15 +13,28 @@ header:
 
 ## Overview
 
-I currently attend classes at Stephen F. Austin State University. I am pursuing a Bachelor's degree with a double major in Computer Science and Modern Languages (French specialization), and a minor in International Business. I expect to graduate in May 2017.
+I currently attend classes at Stephen F. Austin State University.
 
-My GPA is currently 3.677
+### Key Info:
 
-I am currently the secretary of my university's Upsilon Pi Epsilon (UPE) chapter, and have formerly occupied the position of secretary and president for the university's French Club.
+- Majors: Computer Science and Modern Languages (French specialization)
+- Minor: International Business.
+- Expected Graduation: May 2017.
+- GPA: 3.677
 
-I am also a member of the School of Honors and the President's List, and a recipient of the SFA STEM Scholarship.
+### Extracurriculars:
 
-## Topics of Study
+- Secretary of local Upsilon Pi Epsilon chapter
+- Formerly acted as secretary, then president of university French Club
+- Recipient of the SFA STEM Scholarship
+
+### Distinctions:
+
+- President's List Fall 2011, Spring 2012, Spring 2015, Fall 2015 (gap due to medical withdrawal)
+- School of Honors member
+
+
+## Topics of Study<sup><a href='#foot1'>1</a></sup>
 
 ### Computer Science
 
@@ -37,6 +50,9 @@ Object-Oriented Programming|A
 Algorithm Analysis|B
 Organization of Programming Languages|B
 Operating System Design|*In Progress*
+Database Management Systems|*Planned for Fall 2016*
+Discrete Structures|*Planned for Spring 2017*
+Ethics in Computer Science|*Planned for Spring 2017*
 
 ### French
 
@@ -50,10 +66,20 @@ Advanced French Conversation (Study Abroad)|A
 Contemporary French Culture (Study Abroad)|A
 Introduction to French Literature|B
 19<sup>th</sup> Century French Literature|*In Progress*
+European Popular Culture, 1500-1800|*Planned for Fall 2016*
+
 
 ### Business
 
 Course|Grade
 :--|--:
-Principles of Macroeconomics|A
 Principles of Marketing|A
+Principles of Macroeconomics|A
+Principles of Microeconomics|*Planned for Fall 2016*
+International Management|*Planned for Fall 2016*
+International Economics|*Planned for Spring 2017*
+International Marketing|*Planned for Spring 2017*
+International Law|*Planned for Spring 2017*
+
+<hr/>
+<span id='foot1' style='font-size:small'><sup>1</sup> *Topics of study current as of May 2016*</span>
