@@ -36,6 +36,7 @@ Requirements Engineering|A
 Object-Oriented Programming|A
 Algorithm Analysis|B
 Organization of Programming Languages|B
+Operating System Design|*In Progress*
 
 ### French
 
@@ -48,7 +49,7 @@ French Film|A
 Advanced French Conversation (Study Abroad)|A
 Contemporary French Culture (Study Abroad)|A
 Introduction to French Literature|B
-19<sup>th</sup> Century French Literature|A
+19<sup>th</sup> Century French Literature|*In Progress*
 
 ### Business
 

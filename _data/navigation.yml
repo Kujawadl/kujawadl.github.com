@@ -8,3 +8,6 @@ main:
 
   - title: "<img src='/images/briefcase.png' style='height:20px;width:20px;margin:0 0 5px 0;'/> Experience"
     url: /experience
+
+  - title: "<img src='/images/pencil.png' style='height:20px;width:20px;'/> Contact"
+    url: /contact
