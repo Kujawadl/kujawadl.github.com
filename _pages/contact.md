@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Contact"
+title: "Contact Me"
 permalink: /contact
 
 header:

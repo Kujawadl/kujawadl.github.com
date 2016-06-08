@@ -20,7 +20,7 @@ I currently attend classes at Stephen F. Austin State University.
 - Majors: Computer Science and Modern Languages (French specialization)
 - Minor: International Business.
 - Expected Graduation: May 2017.
-- GPA: 3.677
+- GPA: 3.589
 
 ### Extracurriculars:
 
@@ -49,7 +49,7 @@ Requirements Engineering|A
 Object-Oriented Programming|A
 Algorithm Analysis|B
 Organization of Programming Languages|B
-Operating System Design|*In Progress*
+Operating System Design|B
 Database Management Systems|*Planned for Fall 2016*
 Discrete Structures|*Planned for Spring 2017*
 Ethics in Computer Science|*Planned for Spring 2017*
@@ -65,7 +65,7 @@ French Film|A
 Advanced French Conversation (Study Abroad)|A
 Contemporary French Culture (Study Abroad)|A
 Introduction to French Literature|B
-19<sup>th</sup> Century French Literature|*In Progress*
+19<sup>th</sup> Century French Literature|B
 European Popular Culture, 1500-1800|*Planned for Fall 2016*
 
 
