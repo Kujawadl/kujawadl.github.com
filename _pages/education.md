@@ -20,7 +20,7 @@ I currently attend classes at Stephen F. Austin State University.
 - Majors: Computer Science and Modern Languages (French specialization)
 - Minor: International Business.
 - Expected Graduation: May 2017.
-- GPA: 3.589
+- GPA: 3.610
 
 ### Extracurriculars:
 
@@ -30,11 +30,11 @@ I currently attend classes at Stephen F. Austin State University.
 
 ### Distinctions:
 
-- President's List Fall 2011, Spring 2012, Spring 2015, Fall 2015 (gap due to medical withdrawal)
+- President's List Fall 2011, Spring 2012, Spring 2015, Fall 2015 {% include popup.html text="<sup>\*</sup>" popuptext="Gap from Spring 2012 to Spring 2015 is due to a medical withdrawal"%}
 - School of Honors member
 
 
-## Topics of Study<sup><a href='#foot1'>1</a></sup>
+## Topics of Study {% include popup.html text="<sup>\*</sup>" popuptext="Current as of May 2016" %}
 
 ### Computer Science
 
@@ -80,6 +80,3 @@ International Management|*Planned for Fall 2016*
 International Economics|*Planned for Spring 2017*
 International Marketing|*Planned for Spring 2017*
 International Law|*Planned for Spring 2017*
-
-<hr/>
-<span id='foot1' style='font-size:small'><sup>1</sup> *Topics of study current as of May 2016*</span>

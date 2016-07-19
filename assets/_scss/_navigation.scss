@@ -177,7 +177,7 @@
 
   a {
     display: block;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     padding: 0.5rem 0;
     color: $masthead-link-color;
     text-decoration: none;
@@ -353,7 +353,6 @@
   font-family: $sans-serif-narrow;
   font-size: $type-size-6;
   font-weight: bold;
-  text-transform: uppercase;
   border-bottom: 1px solid $border-color;
 }
 

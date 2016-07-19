@@ -26,6 +26,10 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
+# Sass settings
+sass:
+  sass_dir: assets/_scss
+  style: compressed
 
 # SEO Related
 google_site_verification :

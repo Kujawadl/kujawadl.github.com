@@ -12,10 +12,10 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
-    padding: 1em 1em 1em;
+    padding: 1em 0 1em;
     font-family: $sans-serif-narrow;
-    font-weight: 700;
     text-transform: uppercase;
+    font-weight: 700;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -36,6 +36,8 @@
     @include prefix(2.5 of 12);
   }
 
+  padding: 0 1em 0 1em;
+
   ul {
     margin: 0;
     padding: 0;
@@ -52,5 +54,7 @@
 
   &--lg {
     font-size: $type-size-5;
+    text-transform: none;
+    font-variant: small-caps;
   }
 }

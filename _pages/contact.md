@@ -8,34 +8,6 @@ header:
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
-<script type="text/javascript" src="{{basepath}}/assets/js/jquery-2.2.3.min.js"></script>
-<script type="text/javascript" src="{{basepath}}/assets/js/gform_contact.js"></script>
-
-<style>
-#gform {
-  max-width: 610px;
-  margin: 0 auto;
-}
-
-.prompt {
-  display: inline-block;
-  width: 100px;
-  padding: 1em 0 1em 0;
-}
-
-.input {
-  display: inline-block;
-  width: 100%;
-  max-width: 500px;
-}
-
-.buttonrow {
-  max-width: 600px;
-  text-align: center;
-  padding: 1em 0;
-}
-</style>
-
 <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1mo5qkiRpcCYfFbbcjDnQYqwnFSj_AI1eWBqDlKa_-aw/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
   <span class="prompt">Name:&nbsp;</span>
     <input type="text" class="input" name="entry.304859895" id="entry.304859895" required><br/>
