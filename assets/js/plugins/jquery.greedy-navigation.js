@@ -16,8 +16,24 @@ function updateNav() {
 
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
+  // Hide all on mobile
+  if(availableSpace < 400) {
+
+    while ($vlinks.children().length > 1) {
+      // Record the width of the list
+      breaks.push($vlinks.width());
+
+      // Move item to the hidden list
+      $vlinks.children().last().prependTo($hlinks);
+
+      // Show the dropdown btn
+      if($btn.hasClass('hidden')) {
+        $btn.removeClass('hidden');
+      }
+    }
+
   // The visible list is overflowing the nav
-  if($vlinks.width() > availableSpace) {
+  } else if($vlinks.width() > availableSpace) {
 
     // Record the width of the list
     breaks.push($vlinks.width());
@@ -53,6 +69,11 @@ function updateNav() {
 
   // Recur if the visible list is still overflowing the nav
   if($vlinks.width() > availableSpace) {
+    updateNav();
+  }
+
+  // Recur if there is still space for another item in the nav
+  if(breaks.length > 0 && availableSpace > breaks[breaks.length-1]) {
     updateNav();
   }
 

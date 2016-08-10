@@ -7,6 +7,7 @@ header:
   overlay_image: https://images.unsplash.com/photo-1429051883746-afd9d56fbdaf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a40432a29a1c55fc0b2ec7f1f2271877
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
+<script>var submitted = false;</script>
 
 <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1mo5qkiRpcCYfFbbcjDnQYqwnFSj_AI1eWBqDlKa_-aw/formResponse" target="hidden_iframe" onsubmit="submitted=true;">
   <span class="prompt">Name:&nbsp;</span>
