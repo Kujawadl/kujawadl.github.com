@@ -46,6 +46,11 @@ function updateNav() {
       $btn.removeClass('hidden');
     }
 
+    // Recur if the visible list is still overflowing the nav
+    if($vlinks.width() > availableSpace) {
+      updateNav();
+    }
+
   // The visible list is not overflowing
   } else {
 
@@ -62,21 +67,15 @@ function updateNav() {
       $btn.addClass('hidden');
       $hlinks.addClass('hidden');
     }
+
+    // Recur if there is still space for another item in the nav
+    if(breaks.length > 0 && availableSpace > breaks[breaks.length-1]) {
+      updateNav();
+    }
   }
 
   // Keep counter updated
   $btn.attr("count", breaks.length);
-
-  // Recur if the visible list is still overflowing the nav
-  if($vlinks.width() > availableSpace) {
-    updateNav();
-  }
-
-  // Recur if there is still space for another item in the nav
-  if(breaks.length > 0 && availableSpace > breaks[breaks.length-1]) {
-    updateNav();
-  }
-
 }
 
 // Window listeners
