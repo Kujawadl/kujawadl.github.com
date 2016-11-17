@@ -35,7 +35,9 @@ I currently attend classes at Stephen F. Austin State University.
 - Expected to graduate with honors as a University Scholar
 
 
-## Topics of Study {% include popup.html text="<sup>\*</sup>" popuptext="Current as of May 2016" %}
+## Topics of Study {% include popup.html text="<sup>\*</sup>" popuptext="Current as of November 2016" %}
+
+*Honors courses/contracts indicated with \**
 
 ### Computer Science
 
@@ -51,8 +53,8 @@ Object-Oriented Programming|A
 Algorithm Analysis|B
 Organization of Programming Languages|B
 Operating System Design|B
-Cyber and Code Security {% include popup.html text="<sup>\*</sup>" popuptext="Honors Contract" %}|A
-Database Management Systems {% include popup.html text="<sup>\*</sup>" popuptext="Honors Contract" %}|*In Progress*
+Cyber and Code Security\*|A
+Database Management Systems\*|*In Progress*
 Discrete Structures|*Planned for Spring 2017*
 Ethics in Computer Science|*Planned for Spring 2017*
 
@@ -63,12 +65,12 @@ Course|Grade
 French Conversation|A
 Advanced French Composition and Grammar|A
 Francophone World|A
-French Film {% include popup.html text="<sup>\*</sup>" popuptext="Honors Contract" %}|A
+French Film\*|A
 Advanced French Conversation (Study Abroad)|A
 Contemporary French Culture (Study Abroad)|A
 Introduction to French Literature|B
 19<sup>th</sup> Century French Literature|B
-European Popular Culture, 1500-1800 {% include popup.html text="<sup>\*</sup>" popuptext="Honors Contract" %}|*In Progress*
+European Popular Culture, 1500-1800\*|*In Progress*
 
 
 ### Business
