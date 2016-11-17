@@ -44,7 +44,7 @@ I currently attend classes at Stephen F. Austin State University.
 Course|Grade
 :--|--:
 Computer Programming Principles|A
-Event-Driven Programming {% include popup.html text="<sup>\*</sup>" popuptext="Honors Contract" %}|A
+Event-Driven Programming|A
 Data Structures|A
 Computer Organization and Architecture|C
 Software Engineering|A
