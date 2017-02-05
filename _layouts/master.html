@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.name }}</title>
+  <meta name="description" content="{{ page.title }} - {{ site.name }}" />
+  <meta name="keywords" content="{{ page.keywords }}, {{ site.keywords }}" />
+
+  <!-- jQuery -->
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+  <!-- Semantic UI -->
+  <link rel="stylesheet" href="semantic/dist/semantic.min.css">
+  <script src="semantic/dist/semantic.min.js"></script>
+
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js"></script>
+
+  <!-- favicon
+  ================================================== -->
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body class="site">
+  <!-- Following Menu -->
+  <div class="ui large top borderless fixed hidden menu">
+    <div class="ui container">
+      {% include nav.html %}
+    </div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <div class="ui vertical inverted sidebar menu">
+    {% include nav.html %}
+  </div>
+
+  <main class="site-content pusher">
+    {% include {{ page.header }} %}
+    <br />
+    {{ content }}
+    <br />
+  </main>
+
+  <footer>
+    <div class="ui inverted vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable inverted divided equal height stackable grid">
+          <div class="three wide column">
+            <h4 class="ui inverted header">Sitemap</h4>
+            <div class="ui inverted link list">
+              {% include nav.html %}
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui inverted header">Get in touch</h4>
+            <div class="ui inverted link list">
+              {% for profile in site.data.author.profiles %}
+              <a class="item" href="{{ profile.link }}">
+                <i class="{{ profile.icon }} icon"></i> {{ profile.site }}
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="seven wide column">
+            <h4 class="ui inverted header">Proudly powered by:</h4>
+            <div class="ui inverted link list">
+              {% for credit in site.data.credits %}
+              <a class="item" href="{{ credit.link }}">
+                <i class="right triangle icon"></i>
+                <div class="content">
+                  <div>{{ credit.name }}</div>
+                </div>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

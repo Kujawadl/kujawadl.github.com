@@ -1,0 +1,12 @@
+{
+  "name": "kujawadl.github.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Dylan Jager-Kujawa",
+  "license": "",
+  "dependencies": {
+    "semantic-ui": "^2.2.7"
+  }
+}

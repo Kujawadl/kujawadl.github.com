@@ -1,0 +1,71 @@
+---
+layout: default
+title: Contact
+---
+
+<div class="ui small modal">
+  <div class="header">Thanks for reaching out!</div>
+  <div class="content">I'll try to get back to you as soon as I can.</div>
+  <div class="actions">
+    <div class="ui approve button">OK</div>
+  </div>
+</div>
+
+<form class="ui form" action="" method="POST" target="hidden_iframe">
+  <div class="field">
+    <label>Name:</label>
+    <input type="text" class="input" name="name" id="name">
+  </div>
+  <div class="field">
+    <label>Email:</label>
+    <input type="email" class="input" name="email" id="email">
+  </div>
+  <div class="field">
+    <label>Subject:</label>
+    <input type="text" class="input" name="subject" id="subject">
+  </div>
+  <div class="field">
+    <label>Message:</label>
+    <textarea name="message" id="message"></textarea>
+  </div>
+
+  <button class="ui button" type="submit">Submit</button>
+</form>
+
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload=""></iframe>
+
+<script>
+$('.ui.form').form({
+  fields: {
+    name: "empty",
+    email: "email",
+    subject: "empty",
+    message: "empty"
+  }
+});
+
+$('.ui.form').on('submit', function(e) {
+  e.preventDefault();
+
+  var url = "https://docs.google.com/forms/d/1mo5qkiRpcCYfFbbcjDnQYqwnFSj_AI1eWBqDlKa_-aw/formResponse";
+  var name = encodeURIComponent($('#name').val());
+  var email = encodeURIComponent($('#email').val());
+  var subject = encodeURIComponent($('#subject').val());
+  var message = encodeURIComponent($('#message').val());
+
+  url = url + "?entry.304859895=" + name;
+  url = url + "&entry.2064915051=" + email;
+  url = url + "&entry.1946085487=" + subject;
+  url = url + "&entry.1823473257=" + message;
+
+  this.action = url;
+  this.submit();
+
+  $('.ui.small.modal').modal({
+    closable: false,
+    onApprove: function() {
+      window.location = '{{ site.url }}';
+    }
+  }).modal('show');
+});
+</script>

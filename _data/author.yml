@@ -1,0 +1,21 @@
+name             : "Dylan Jager-Kujawa"
+avatar           : "/images/bio-photo.jpg"
+bio              : "CS Undergrad at Stephen F. Austin State University"
+location         : "Nacogdoches, TX"
+profiles:
+  - site: LinkedIn
+    icon: linkedin
+    username: DylanJagerKujawa
+    link: http://www.linkedin.com/in/DylanJagerKujawa
+  - site: GitHub
+    icon: github
+    username: Kujawadl
+    link: http://www.github.com/Kujawadl
+  - site: Google+
+    icon: google
+    username: DylanJagerKujawa
+    link: http://www.google.com/+DylanJagerKujawa
+  - site: Facebook
+    icon: facebook
+    username: DylanJagerKujawa
+    link: http://www.facebook.com/DylanJagerKujawa
