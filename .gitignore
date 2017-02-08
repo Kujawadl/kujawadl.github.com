@@ -6,6 +6,5 @@ node_modules
 *.log
 *.lock
 
-semantic
-!semantic/dist
-
+assets/semantic
+!assets/semantic/dist
