@@ -1,5 +1,5 @@
 {% for item in site.data.nav %}
-{% if item.text == page.title %}
+{% if item.link == page.permalink %}
 <a class="active item" href="{{ item.link }}">{{ item.text }}</a>
 {% else %}
 <a class="item" href="{{ item.link }}">{{ item.text }}</a>

@@ -4,5 +4,14 @@ header: headers/default.html
 ---
 
 <div class="ui text container">
-  {{ content }}
+  {% if page.post_title != '' %}
+    <h1>{{ page.post_title }}</h1>
+    {% if page.date != '' %}
+      <em>{{ page.date | date: '%B %-d, %Y' }}</em>
+    {% endif %}
+  {% endif %}
+
+  <div class="ui piled segment">
+    {{ content }}
+  </div>
 </div>

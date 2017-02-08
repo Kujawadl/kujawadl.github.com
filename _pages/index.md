@@ -1,6 +1,7 @@
 ---
 layout: welcome
 title: Dylan Jager-Kujawa
+permalink: /
 description: >
   Computer Science/Modern Languages Student <br />
   Part-time Web Developer
