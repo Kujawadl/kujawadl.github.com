@@ -5,6 +5,9 @@ permalink: /
 description: >
   Computer Science/Modern Languages Student <br />
   Part-time Web Developer
+keywords:
+  - home
+  - index
 ---
 
 # Hello World!

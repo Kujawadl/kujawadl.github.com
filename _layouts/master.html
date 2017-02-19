@@ -8,7 +8,7 @@
   {% if page.description %}
     <meta name="description" content="{{ page.description }}" />
   {% endif %}
-  <meta name="keywords" content="{{ page.keywords }}, {{ site.keywords }}" />
+  <meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}, {{ site.keywords | join: ', ' | escape }}" />
 
   <!-- Semantic UI -->
   <link rel="stylesheet" href="/assets/semantic/dist/semantic.min.css">

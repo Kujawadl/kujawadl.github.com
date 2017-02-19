@@ -6,6 +6,16 @@ email : dylan@jager-kujawa.com
 github : Kujawadl
 author : Dylan Jager-Kujawa
 year : 2017
+keywords:
+  - Dylan
+  - Jager-Kujawa
+  - Kujawa
+  - Kujawadl
+  - computer science
+  - student
+  - web
+  - web design
+
 include:
   - _pages
 exclude :
