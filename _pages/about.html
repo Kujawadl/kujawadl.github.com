@@ -217,6 +217,7 @@ permalink: /about
   <p>The new TFS 2015 build system is incompatible with these XAML builds. The 'vNext' system uses a modular, drag-and-drop approach, grouping common build actions into tasks. On the build agent, these tasks are actually powershell or javascript (Node.js) scripts. I adapted our previous build assemblies into .NET-based powershell cmdlets, and created build tasks for each of our deployment steps.</p>
 
   <h3>Build Status Page</h3>
+  <a href="/vNextBuilds">Click here for a semi-functional mockup</a>
 
   <p>I was dissatisfied with built in build status page, which displays all builds in the order they completed, with no option to view the latest of each build. Meaning there is no way to quickly determine if a given build script is currently passing or failing. Using the TFS 2015 REST APIs, I created my own build status page with the following features:</p>
 
