@@ -18,6 +18,7 @@ keywords:
 
 include:
   - _pages
+  - sitemap.xml
 exclude :
   - CNAME
   - Gemfile
