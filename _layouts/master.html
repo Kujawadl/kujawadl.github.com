@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -39,7 +39,11 @@
   </div>
 
   <main class="site-content pusher">
-    {% include {{ layout.header }} %}
+    {% if layout.header %}
+      {% include {{ layout.header }} %}
+    {% else %}
+      {% include headers/default.html %}
+    {% endif %}
     <br />
     {{ content }}
     <br />
