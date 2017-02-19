@@ -35,4 +35,6 @@ $(document).ready(function() {
   $('.ui.accordion').accordion();
 
   $('.ui.embed').embed();
+
+  $('.ui.tabular.menu .item').tab();
 });

@@ -1,38 +1,3 @@
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
-
-<script src="/assets/js/vNextBuilds.min.js"></script>
-
-<script>
-	$(document).ready(function () {
-    $.getJSON("/assets/embed/sample.json", function(json) {
-      var projects = json.data;
-
-  		bvm = new BuildsViewModel(projects);
-  		ko.applyBindings(bvm);
-  		$(".nav-tabs a:first").tab("show");
-      $('[data-toggle="popover"]').popover({ container: 'body' });
-    });
-
-    function resize() {
-      var height = $(".container").height();
-      window.parent.postMessage(["setHeight", height], "*");
-    };
-
-    $('a, button').click(function() {
-      // Wait 200ms for potential tab fade animation to complete
-      setTimeout(resize, 500);
-    });
-    $(window).resize(resize);
-
-    // Initial resize
-    resize();
-	});
-</script>
-
 <style>
 	table, .nav-tabs li a {
 		font-size: small;
@@ -185,3 +150,57 @@
   	</div>
   </div>
 </div>
+
+<script src="/assets/js/jquery-3.1.1.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/knockout.min.js"></script>
+<script src="/assets/js/moment.min.js"></script>
+<script src="/assets/js/vNextBuilds.min.js"></script>
+
+<noscript id="deferred-styles">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+</noscript>
+<script>
+  // Defer CSS loading
+  var loadDeferredStyles = function() {
+    var addStylesNode = document.getElementById("deferred-styles");
+    var replacement = document.createElement("div");
+    replacement.innerHTML = addStylesNode.textContent;
+    document.body.appendChild(replacement)
+    addStylesNode.parentElement.removeChild(addStylesNode);
+  };
+  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+      webkitRequestAnimationFrame || msRequestAnimationFrame;
+  if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+  else window.addEventListener('load', loadDeferredStyles);
+
+  // Get build status sample data and load view model
+	$(document).ready(function () {
+    $.getJSON("/assets/embed/sample.json", function(json) {
+      var projects = json.data;
+
+  		bvm = new BuildsViewModel(projects);
+  		ko.applyBindings(bvm);
+  		$(".nav-tabs a:first").tab("show");
+      $('[data-toggle="popover"]').popover({ container: 'body' });
+
+      // Resize parent to match iframe height
+      function resize() {
+        var height = $(".container").height();
+        window.parent.postMessage(["setHeight", height], "*");
+      };
+
+      $('a, button').click(function() {
+        // Wait 200ms for potential tab fade animation to complete
+        setTimeout(resize, 200);
+      });
+      $(window).resize(resize);
+
+      // Initial resize
+      resize();
+
+      // Inform parent that iframe is finished loading
+      window.parent.postMessage(["ready"], "*");
+    });
+	});
+</script>

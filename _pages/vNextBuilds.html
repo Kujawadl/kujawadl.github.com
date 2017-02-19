@@ -5,6 +5,21 @@ description: Functional Mockup
 permalink: /vNextBuilds
 ---
 
+<div class="ui container">
+  <div class="ui raised segment">
+    <p>This page is an adaptation of the live build status page created during my internship with Elliott Electric Supply.</p>
+    <p>All API calls have been removed and replaced with static sample data generated from <a href="http://mockaroo.com" target="_blank">Mockaroo</a>. Most of the javascript has been minified as well. More legible code snippets will follow in a later blog post.</p>
+  </div>
+</div>
+
+<div class="ui basic segment">
+  <div class="ui active dimmer">
+    <br /><br /><br /><br /><br /><br />
+    <div class="ui large centered inline text loader">Loading...</div>
+  </div>
+  <div class="ui embed" data-url="/assets/embed/vNextBuilds.html" style="background: #FFF;"></div>
+</div>
+
 <script>
   $(document).ready(function() {
     window.addEventListener('message', function(e) {
@@ -14,17 +29,10 @@ permalink: /vNextBuilds
         case 'setHeight':
           $('.ui.embed').css('padding-bottom', data + 'px');
           break;
+        case 'ready':
+          $('.ui.active.dimmer').removeClass('active');
+          break;
       }
     }, false);
   });
 </script>
-
-<div class="ui container">
-  <div class="ui raised segment">
-    <p>This page is an adaptation of the live build status page created during my internship with Elliott Electric Supply.</p>
-    <p>All API calls have been removed and replaced with static sample data generated from <a href="http://mockaroo.com" target="_blank">Mockaroo</a>. Most of the javascript has been minified as well. More legible code snippets will follow in a later blog post.</p>
-  </div>
-</div>
-
-<div class="ui embed" data-url="/assets/embed/vNextBuilds.html" style="background: #FFF;">
-</div>
