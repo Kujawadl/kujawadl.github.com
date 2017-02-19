@@ -112,7 +112,7 @@ sitemap: false
   				<tr data-bind="css: { 'danger': status() == 'failed' }">
   					<td class="hidden-xs hidden-sm"><span data-bind="text: definitionId"></span></td>
   					<td class="hidden-xs">
-  						<a href="#" data-toggle="popover" data-trigger="hover" data-title="Builds Overview" data-content="Would link to the list of builds for this definition.">
+  						<a href="#" data-toggle="popover" data-trigger="hover" data-title="Builds Overview" data-content="Would link to the list of builds for this definition." onclick="return false;">
   							<span data-bind="text: name"></span>
   						</a>
   					</td>
@@ -120,7 +120,7 @@ sitemap: false
   					<!-- ko if: latestBuildNumber() != '' -->
   					<td>
   						<div class="row">
-  							<a class="col-sm-12 col-md-6" href="#" data-toggle="popover" data-trigger="hover" data-title="Latest Build" data-content="Would link directly to the latest build." style="display: inline-block; float: left;">
+  							<a class="col-sm-12 col-md-6" href="#" data-toggle="popover" data-trigger="hover" data-title="Latest Build" data-content="Would link directly to the latest build." style="display: inline-block; float: left;" onclick="return false;">
   								<span data-bind="text: latestBuildNumber()"></span>
   							</a>
   							<em class="hidden-xs hidden-sm col-md-6 text-right" data-bind="if: status() == 'failed'" style="display: inline-block; float: right;">
@@ -133,7 +133,7 @@ sitemap: false
   					<td>No completed builds</td>
   					<!-- /ko -->
 
-  					<td class="text-right"><a href="#" data-bind="text: changeSet" data-toggle="popover" data-trigger="hover" data-placement="left" data-title="Faster Debugging" data-content="For improved debugging, a database table can track the changeset that initially broke the build, rather than the changeset that triggered the most recent build, so your team can instantly determine what changes need revision."></a></td>
+  					<td class="text-right"><a href="#" data-bind="text: changeSet" data-toggle="popover" data-trigger="hover" data-placement="left" data-title="Faster Debugging" data-content="For improved debugging, a database table can track the changeset that initially broke the build, rather than the changeset that triggered the most recent build, so your team can instantly determine what changes need revision." onclick="return false"></a></td>
 
   					<!-- ko if: badgeSrc() != '' -->
   					<td class="hidden-xs hidden-sm">
@@ -143,7 +143,7 @@ sitemap: false
 
   					<!-- ko if: errors().length > 0 -->
   					<td class="hidden-xs hidden-sm text-center"  data-toggle="popover" data-trigger="hover" data-placement="left" data-title="Immediately Read Build Errors" data-content="Click to view a list of build errors to get an idea of the underlying issue.">
-  						<a data-bind="click: $root.setDetailBuild" data-toggle="modal" data-target="#modalBuildDetails">View</a>
+  						<a href="#" data-bind="click: $root.setDetailBuild" data-toggle="modal" data-target="#modalBuildDetails" onclick="return false;">View</a>
   					</td>
   					<!-- /ko -->
   					<!-- ko if: errors().length == 0 -->
