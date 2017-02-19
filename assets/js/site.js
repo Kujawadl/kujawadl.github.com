@@ -33,4 +33,6 @@ $(document).ready(function() {
   $('.ui.sticky').sticky();
 
   $('.ui.accordion').accordion();
+
+  $('.ui.embed').embed();
 });
