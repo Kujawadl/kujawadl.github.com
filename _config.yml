@@ -18,7 +18,6 @@ keywords:
 
 include:
   - _pages
-  - sitemap.xml
 exclude :
   - CNAME
   - Gemfile
@@ -26,6 +25,9 @@ exclude :
   - node_modules
   - package.json
   - semantic.json
+
+gems:
+  - jekyll-sitemap
 
 defaults:
   -
