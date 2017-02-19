@@ -4,5 +4,19 @@ title: TFS 2015 Build Status Page (Sample)
 permalink: /vNextBuilds
 ---
 
+<script>
+  $(document).ready(function() {
+    window.addEventListener('message', function(e) {
+      var eventName = e.data[0];
+      var data = e.data[1];
+      switch(eventName) {
+        case 'setHeight':
+          $('.ui.embed').css('padding-bottom', data + 'px');
+          break;
+      }
+    }, false);
+  });
+</script>
+
 <div class="ui embed" data-url="/assets/embed/vNextBuilds.html" style="background: #FFF;">
 </div>

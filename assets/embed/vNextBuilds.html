@@ -13,6 +13,20 @@
 		bvm = new BuildsViewModel(projects);
 		ko.applyBindings(bvm);
 		$(".nav-tabs a:first").tab("show");
+
+    function resize() {
+      var height = $(".container").height();
+      window.parent.postMessage(["setHeight", height], "*");
+    };
+
+    $('a, button').click(function() {
+      // Wait 200ms for potential tab fade animation to complete
+      setTimeout(resize, 200);
+    });
+    $(window).resize(resize);
+
+    // Initial resize
+    resize();
 	});
 </script>
 
@@ -52,9 +66,7 @@
   		</small>
   	</h2>
   </div>
-  </asp:Content>
 
-  <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
   <div class="modal fade" tabindex="-1" role="dialog" id="modalBuildDetails">
   	<div class="modal-dialog modal-lg" role="document">
   		<div class="modal-content" data-bind="if: detailBuild() != null">
