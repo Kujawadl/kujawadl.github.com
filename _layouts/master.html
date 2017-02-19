@@ -5,7 +5,9 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} - {{ site.name }}</title>
-  <meta name="description" content="{{ page.title }} - {{ site.name }}" />
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+  {% endif %}
   <meta name="keywords" content="{{ page.keywords }}, {{ site.keywords }}" />
 
   <!-- Semantic UI -->
