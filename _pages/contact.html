@@ -16,6 +16,10 @@ keywords:
   </div>
 </div>
 
+<div class="ui active inverted dimmer">
+  <div class="ui medium text loader">Loading...</div>
+</div>
+
 <form class="ui form" action="" method="POST" target="hidden_iframe">
   <div class="field">
     <label>Name:</label>
@@ -40,37 +44,41 @@ keywords:
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload=""></iframe>
 
 <script>
-$('.ui.form').form({
-  fields: {
-    name: "empty",
-    email: "email",
-    subject: "empty",
-    message: "empty"
-  }
-});
-
-$('.ui.form').on('submit', function(e) {
-  e.preventDefault();
-
-  var url = "https://docs.google.com/forms/d/1mo5qkiRpcCYfFbbcjDnQYqwnFSj_AI1eWBqDlKa_-aw/formResponse";
-  var name = encodeURIComponent($('#name').val());
-  var email = encodeURIComponent($('#email').val());
-  var subject = encodeURIComponent($('#subject').val());
-  var message = encodeURIComponent($('#message').val());
-
-  url = url + "?entry.304859895=" + name;
-  url = url + "&entry.2064915051=" + email;
-  url = url + "&entry.1946085487=" + subject;
-  url = url + "&entry.1823473257=" + message;
-
-  this.action = url;
-  this.submit();
-
-  $('.ui.small.modal').modal({
-    closable: false,
-    onApprove: function() {
-      window.location = '{{ site.url }}';
+$(document).ready(function() {
+  $('.ui.form').form({
+    fields: {
+      name: "empty",
+      email: "email",
+      subject: "empty",
+      message: "empty"
     }
-  }).modal('show');
+  });
+
+  $('.ui.form').on('submit', function(e) {
+    e.preventDefault();
+
+    var url = "https://docs.google.com/forms/d/1mo5qkiRpcCYfFbbcjDnQYqwnFSj_AI1eWBqDlKa_-aw/formResponse";
+    var name = encodeURIComponent($('#name').val());
+    var email = encodeURIComponent($('#email').val());
+    var subject = encodeURIComponent($('#subject').val());
+    var message = encodeURIComponent($('#message').val());
+
+    url = url + "?entry.304859895=" + name;
+    url = url + "&entry.2064915051=" + email;
+    url = url + "&entry.1946085487=" + subject;
+    url = url + "&entry.1823473257=" + message;
+
+    this.action = url;
+    this.submit();
+
+    $('.ui.small.modal').modal({
+      closable: false,
+      onApprove: function() {
+        window.location = '{{ site.url }}';
+      }
+    }).modal('show');
+  });
+
+  $('.ui.active.dimmer').removeClass('active');
 });
 </script>
