@@ -5,6 +5,3 @@ _site
 node_modules
 *.log
 *.lock
-
-assets/semantic
-!assets/semantic/dist
