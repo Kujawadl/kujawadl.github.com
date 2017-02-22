@@ -47,10 +47,8 @@ sitemap: false
   				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   				<h4 class="modal-title" data-bind="text: detailBuild().latestBuildNumber()"></h4>
   			</div>
-  			<div class="modal-body">
-  				<!-- ko foreach: detailBuild().errors() -->
+  			<div class="modal-body" data-bind="foreach: detailBuild().errors()">
   				<pre class="text-danger" data-bind="text: $data"></pre>
-  				<!-- /ko -->
   			</div>
   		</div>
   	</div>
