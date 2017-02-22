@@ -24,9 +24,6 @@ sitemap: false
   	<h2 class="col-xs-12">
   		<span class="hidden-xs">Status of vNext Builds</span>
   		<small data-bind="css: { 'text-danger': !isLoading() && numFailing() > 0, 'text-success': !isLoading() && numFailing() == 0 }">
-  			<!-- ko if: isLoading() -->
-  			<span class="glyphicon glyphicon-refresh"></span>
-  			<!-- /ko -->
   			<!-- ko if: !isLoading() -->
   			<span data-bind="if: numFailing() > 0">
   				<span data-bind="text: numFailing()"></span>&nbsp;out of&nbsp;<span data-bind="	text: numBuilds()"></span>&nbsp;builds failing
