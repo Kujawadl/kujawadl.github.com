@@ -37,6 +37,13 @@ defaults:
     values:
       title: Dylan Jager-Kujawa
       layout: default
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      title: "Blog"
+      description: Side projects and other assorted interests
 
 markdown:          kramdown
 highlighter:       rouge
