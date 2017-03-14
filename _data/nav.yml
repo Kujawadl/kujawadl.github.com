@@ -4,5 +4,8 @@
 - text: About
   link: /about
 
+- text: Blog
+  link: /blog
+
 - text: Contact
   link: /contact
