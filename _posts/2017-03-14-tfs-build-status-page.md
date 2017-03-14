@@ -5,7 +5,7 @@ sitemap: false
 
 When transitioning 200-300 build definitions from XAML to vNext, my primary concern was, naturally, making sure the new builds worked consistently. The build overview page built-in to TFS 2015 displays all the builds that have run for a particular team project, in the order they were run. However, when you have multiples of some builds, and others that haven't built recently, it becomes difficult to track which builds need some TLC. I needed a way to quickly view the status of the latest build from each definition, preferably without adding too much extra development time to an already overdue project.
 
-This post acts as something of a walkthrough of creating a custom build status page. It assumes a basic knowledge of Knockout.js, Bootstrap, and jQuery Ajax. For more information, vew the [mockup](/vNextBuilds), or the full [javascript](https://gist.github.com/Kujawadl/ee7e0d1a21b1e993eb967677ca23f143) and [html](https://gist.github.com/Kujawadl/4094714b43c0c60230b67848f5789a26) source.
+This post acts as something of a walkthrough of creating a custom build status page. It assumes a basic knowledge of Knockout.js, Bootstrap, and jQuery Ajax, and I don't intend for it to be a step-by-step guide, more of an explanation of my thought process in creating the page. For more information, view the [mockup](/vNextBuilds), or the full [javascript](https://gist.github.com/Kujawadl/ee7e0d1a21b1e993eb967677ca23f143) and [html](https://gist.github.com/Kujawadl/4094714b43c0c60230b67848f5789a26) source.
 
 <div class="ui mini message">
   <div class="ui header">
@@ -211,3 +211,13 @@ Using a Knockout computed observable, we can create a Chrome notification whenev
 We can use a click data-bind attribute to call a function that loads errors into a Bootstrap modal. This allows us to immediately understand why the build is failing, which doesn't *seem* useful on its own. But when you have 50+ builds broken, many of which may be the result of improperly configured build definitions, having this modal saves a tremendous amount of time in figuring out which builds need your attention first.
 
 {% include image.html src="/assets/images/vNextBuilds/Screenshots/Error_Modal.PNG" alt="Error modal" centered="true" imgsize="fluid" %}
+
+### TFS Helper
+
+If desired, you could go as far as to set up a full TFS Helper web project using ASP.NET and incorporate this as one of the pages. The advantage here is that you could use service hooks on completed builds to maintain a database of the "breaking" changeset, rather than just using the changeset of the latest build, which may be completely irrelevant to what's broken. You would then need to implement a simple API to call instead of the built-in TFS APIs, but that shouldn't take more than about an hour.
+
+<hr />
+
+And that's about all I have to say about that. This just goes to show that extending the functionality of TFS doesn't necessarily require building extensions, or setting up complicated development environments with hundreds of packages and dependencies. You can create a reasonable facsimile in an afternoon using just a couple of simple frameworks and your text editor of choice.
+
+Again, for more info, be sure to check out the [mockup](/vNextBuilds), and the full [javascript](https://gist.github.com/Kujawadl/ee7e0d1a21b1e993eb967677ca23f143) and [html](https://gist.github.com/Kujawadl/4094714b43c0c60230b67848f5789a26) source.
