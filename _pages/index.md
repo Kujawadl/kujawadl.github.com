@@ -1,5 +1,5 @@
 ---
-layout: welcome
+layout: default
 title: Dylan Jager-Kujawa
 permalink: /
 description: >
