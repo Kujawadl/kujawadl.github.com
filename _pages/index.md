@@ -17,11 +17,11 @@ In any case, welcome!
 
 ### Who am I?
 
-My name is Dylan, and I'm a recent graduate of Stephen F. Austin State University in Nacogdoches, TX, and a full-time web developer at Elliott Electric Supply.
+My name is Dylan, and I'm a recent graduate of Stephen F. Austin State University in Nacogdoches, TX, and a full-time web developer for Robert Half Technology's Salaried Professional Service.
 
 I speak English and French fluently, and am currently learning Dutch as well.
 
-I love all things tech, and when I'm not at work or working on side projects, I spend my time catching up on the extensive reading list that build up during my college career.
+I love all things tech, and when I'm not at work or working on side projects, I spend my time catching up on the extensive reading list that built up during my college career.
 
 ### What is this?
 
