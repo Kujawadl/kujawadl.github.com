@@ -34,7 +34,7 @@ keywords:
     <textarea name="message" id="message"></textarea>
   </div>
 
-  <button class="ui button g-recaptcha" data-sitekey="6LdyWzMaAAAAAM8HQxIYU-2Zv0L1aM7tuacSaZmX" data-callback="onSubmit" type="submit">Submit</button>
+  <button class="ui button g-recaptcha" data-sitekey="6LdyWzMaAAAAAM8HQxIYU-2Zv0L1aM7tuacSaZmX" data-callback="onSubmit">Submit</button>
 </form>
 
 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload=""></iframe>
@@ -43,7 +43,7 @@ keywords:
 <script>
 $(document).ready(function() {
   $('.ui.form').form({
-    fields: {	}
+    fields: {
       name: "empty",	
       email: "email",	
       subject: "empty",	
