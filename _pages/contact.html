@@ -16,6 +16,10 @@ keywords:
   </div>
 </div>
 
+<div class="ui active inverted dimmer">
+  <div class="ui medium text loader">Loading...</div>
+</div>
+
 <form id="contact-form" class="ui form" action="https://us-south.functions.appdomain.cloud/api/v1/web/dylanleekujawa%40gmail.com_dev/default/jagerkujawa_contact" method="POST" target="hidden_iframe">
   <div class="field">
     <label>Name:</label>
@@ -50,6 +54,31 @@ $(document).ready(function() {
       message: "empty"	
     }	
   });
+  
+  $('#contact-form').on('submit', function(e) {
+    const form = e.target;
+    
+    $('.ui.dimmer').addClass('active');
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form)
+    })
+      .then((res) => res.statusCode === 200)
+      .then((success) => {
+        if (success) {
+          $('.ui.small.modal').modal({
+            closable: false,
+            onApprove: function() {
+              window.location = '{{ site.url }}';
+            }
+          }).modal('show');
+        }
+      });
+    $('.ui.dimmer').removeClass('active');
+    e.preventDefault();
+  });
+  
+  $('.ui.dimmer').removeClass('active');
 });
   
 function onSubmit(token) {
