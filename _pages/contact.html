@@ -61,7 +61,7 @@ $(document).ready(function() {
     $('.ui.dimmer').addClass('active');
     fetch(form.action, {
       method: form.method,
-      body: new FormData(form)
+      body: JSON.stringify(Object.fromEntries(new FormData(form)))
     })
       .then((res) => res.statusCode === 200)
       .then((success) => {
