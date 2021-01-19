@@ -42,7 +42,7 @@ keywords:
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
 $(document).ready(function() {
-  $('.ui.form').form({
+  $('#contact-form').form({
     fields: {
       name: "empty",	
       email: "email",	
@@ -53,6 +53,6 @@ $(document).ready(function() {
 });
   
 function onSubmit(token) {
-  document.getElementById("contact-form").submit();
+  $('#contact-form').submit();
 }
 </script>
