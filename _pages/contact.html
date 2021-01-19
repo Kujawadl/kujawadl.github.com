@@ -20,7 +20,7 @@ keywords:
   <div class="ui medium text loader">Loading...</div>
 </div>
 
-<form class="ui form" action="" method="POST" target="hidden_iframe">
+<form id="contact-form" class="ui form" action="https://us-south.functions.appdomain.cloud/api/v1/web/dylanleekujawa%40gmail.com_dev/default/jagerkujawa_contact" method="POST">
   <div class="field">
     <label>Name:</label>
     <input type="text" class="input" name="name" id="name">
@@ -38,47 +38,12 @@ keywords:
     <textarea name="message" id="message"></textarea>
   </div>
 
-  <button class="ui button" type="submit">Submit</button>
+  <button class="ui button g-recaptcha" data-sitekey="6LdyWzMaAAAAAM8HQxIYU-2Zv0L1aM7tuacSaZmX" data-callback="onSubmit" type="submit">Submit</button>
 </form>
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload=""></iframe>
-
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
-$(document).ready(function() {
-  $('.ui.form').form({
-    fields: {
-      name: "empty",
-      email: "email",
-      subject: "empty",
-      message: "empty"
-    }
-  });
-
-  $('.ui.form').on('submit', function(e) {
-    e.preventDefault();
-
-    var url = "https://docs.google.com/forms/d/1mo5qkiRpcCYfFbbcjDnQYqwnFSj_AI1eWBqDlKa_-aw/formResponse";
-    var name = encodeURIComponent($('#name').val());
-    var email = encodeURIComponent($('#email').val());
-    var subject = encodeURIComponent($('#subject').val());
-    var message = encodeURIComponent($('#message').val());
-
-    url = url + "?entry.304859895=" + name;
-    url = url + "&entry.2064915051=" + email;
-    url = url + "&entry.1946085487=" + subject;
-    url = url + "&entry.1823473257=" + message;
-
-    this.action = url;
-    this.submit();
-
-    $('.ui.small.modal').modal({
-      closable: false,
-      onApprove: function() {
-        window.location = '{{ site.url }}';
-      }
-    }).modal('show');
-  });
-
-  $('.ui.active.dimmer').removeClass('active');
-});
+function onSubmit(token) {
+  document.getElementById("contact-form").submit();
+}
 </script>
