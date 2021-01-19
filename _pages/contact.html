@@ -66,9 +66,8 @@ $(document).ready(function() {
       },
       body: JSON.stringify(Object.fromEntries(new FormData(form)))
     })
-      .then((res) => res.statusCode === 200)
-      .then((success) => {
-        if (success) {
+      .then((res) => {
+        if (res.status === 200) {
           $('.ui.small.modal').modal({
             closable: false,
             onApprove: function() {
